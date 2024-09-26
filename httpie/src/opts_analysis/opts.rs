@@ -20,27 +20,27 @@ pub enum SubCommand {
 #[derive(Parser, Debug)]
 pub struct Get {
     #[clap(value_parser(parse_url))]
-    url: String,
+    pub url: String,
 }
 
 #[derive(Parser, Debug)]
 pub struct Post {
     #[clap(value_parser(parse_url))]
-    url: String,
+    pub url: String,
     #[clap(value_parser(parse_kv_pairs))]
-    body: Vec<KVPair>,
+    pub body: Vec<KVPair>,
 }
 
 #[derive(Parser, Debug)]
 pub struct Put {
     #[clap(value_parser(parse_url))]
-    url: String,
+    pub url: String,
 
-    body: Vec<KVPair>,
+    pub body: Vec<KVPair>,
 }
 
 #[derive(Parser, Debug)]
 pub struct Delete {
     #[clap(value_parser(parse_url))]
-    url: String,
+    pub url: String,
 }
