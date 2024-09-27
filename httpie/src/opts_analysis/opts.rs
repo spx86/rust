@@ -21,6 +21,8 @@ pub enum SubCommand {
 pub struct Get {
     #[clap(value_parser(parse_url))]
     pub url: String,
+    #[clap(value_parser(parse_kv_pairs))]
+    pub body: Vec<KVPair>,
 }
 
 #[derive(Parser, Debug)]
@@ -36,6 +38,7 @@ pub struct Put {
     #[clap(value_parser(parse_url))]
     pub url: String,
 
+    #[clap(value_parser(parse_kv_pairs))]
     pub body: Vec<KVPair>,
 }
 
@@ -43,4 +46,6 @@ pub struct Put {
 pub struct Delete {
     #[clap(value_parser(parse_url))]
     pub url: String,
+    #[clap(value_parser(parse_kv_pairs))]
+    pub body: Vec<KVPair>,
 }
