@@ -6,6 +6,10 @@ use reqwest::{header, Client, Response};
 use anyhow::Result;
 use colored::*;
 use mime::Mime;
+use syntect::highlighting::{Style, ThemeSet};
+use syntect::parsing::SyntaxSet;
+use syntect::easy::HighlightLines;
+use syntect::util::{as_latex_escaped, LinesWithEndings};
 
 
 // pub async fn get(client: Client, args: &Get) -> Result<()>{
@@ -82,6 +86,21 @@ fn print_headers(headers: &Response) {
 fn print_body(m:Option<Mime>, body: &String) {
     match m {
         Some(v) if v == mime::APPLICATION_JSON => {
+            let ps = SyntaxSet::load_defaults_newlines();
+            let ts = ThemeSet::load_defaults();
+            let s = jsonxf::pretty_print(body).unwrap().cyan().to_string();
+            
+            let syntax = ps.find_syntax_by_extension("json").unwrap();
+            let mut h = HighlightLines::new(syntax, &ts.themes["InspiredGitHub"]);
+
+            for line in LinesWithEndings::from(&s) {
+                // LinesWithEndings enables use of newlines mode
+                let ranges: Vec<(Style, &str)> = h.highlight_line(line, &ps).unwrap();
+                let escaped = as_latex_escaped(&ranges[..]);
+                println!("\n{:?}", line);
+                println!("\n{}", escaped);
+            }
+
             println!("{}", jsonxf::pretty_print(body).unwrap().cyan())
         }
         _ => println!("{}", body),
@@ -97,6 +116,7 @@ fn get_content_type(resp: &Response) -> Option<Mime> {
 async fn print_resp(resp: Response) -> Result<()> {
     print_status(&resp);
     print_headers(&resp);
+
     let mime = get_content_type(&resp);
     print_body(mime, &resp.text().await?);
     Ok(())
