@@ -9,7 +9,8 @@ use mime::Mime;
 use syntect::highlighting::{Style, ThemeSet};
 use syntect::parsing::SyntaxSet;
 use syntect::easy::HighlightLines;
-use syntect::util::{as_latex_escaped, LinesWithEndings};
+use syntect::util::{as_24_bit_terminal_escaped, LinesWithEndings};
+
 
 
 // pub async fn get(client: Client, args: &Get) -> Result<()>{
@@ -88,7 +89,7 @@ fn print_body(m:Option<Mime>, body: &String) {
         Some(v) if v == mime::APPLICATION_JSON => {
             let ps = SyntaxSet::load_defaults_newlines();
             let ts = ThemeSet::load_defaults();
-            let s = jsonxf::pretty_print(body).unwrap().cyan().to_string();
+            let s = jsonxf::pretty_print(body).unwrap().to_string();
             
             let syntax = ps.find_syntax_by_extension("json").unwrap();
             let mut h = HighlightLines::new(syntax, &ts.themes["InspiredGitHub"]);
@@ -96,12 +97,10 @@ fn print_body(m:Option<Mime>, body: &String) {
             for line in LinesWithEndings::from(&s) {
                 // LinesWithEndings enables use of newlines mode
                 let ranges: Vec<(Style, &str)> = h.highlight_line(line, &ps).unwrap();
-                let escaped = as_latex_escaped(&ranges[..]);
-                println!("\n{:?}", line);
-                println!("\n{}", escaped);
+                let escaped = as_24_bit_terminal_escaped(&ranges[..], false);
+                print!("{}", escaped);
             }
-
-            println!("{}", jsonxf::pretty_print(body).unwrap().cyan())
+            println!();
         }
         _ => println!("{}", body),
     }
