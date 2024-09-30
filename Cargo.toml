@@ -1,2 +1,10 @@
 [workspace]
-members = ["httpie", "thumbor_rs"]
+members = [
+    "httpie", 
+    "thumbor_rs"
+]
+
+
+resolver = "2"
+
+
