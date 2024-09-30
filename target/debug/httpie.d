@@ -1,1 +1,0 @@
-/home/spengxu/rust/target/debug/httpie: /home/spengxu/rust/httpie/src/http_request/http.rs /home/spengxu/rust/httpie/src/http_request/mod.rs /home/spengxu/rust/httpie/src/main.rs /home/spengxu/rust/httpie/src/opts_analysis/format_vaild.rs /home/spengxu/rust/httpie/src/opts_analysis/mod.rs /home/spengxu/rust/httpie/src/opts_analysis/opts.rs
