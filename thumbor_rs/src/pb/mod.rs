@@ -1,8 +1,7 @@
 mod abi;
 pub use abi::*;
 
-use std::io::Write;
-use base64::{alphabet, engine::general_purpose, Engine};
+use base64::{engine::general_purpose, Engine};
 use photon_rs::transform::SamplingFilter;
 use prost::Message;
 use std::convert::TryFrom;
