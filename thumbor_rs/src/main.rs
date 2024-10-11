@@ -1,6 +1,8 @@
 mod pb; 
+mod engine;
 use pb::*;
-
+use engine::{Engine, Photon};
+use image::ImageFormat;
 use axum::{
     extract::{Path, Extension}, 
     routing::get, 
@@ -75,7 +77,14 @@ async fn generate(
         .await
         .map_err(|_| StatusCode::BAD_REQUEST)?;
     // TODO: handle image
+    let mut engine: Photon = data
+        .try_into()
+        .map_err(|_| StatusCode::INTERNAL_SERVER_ERROR)?;
 
+    engine.apply(&spec.specs);
+
+    let image = engine.generate(ImageFormat::Jpeg);
+    info!("Finished processing: image size {}", image.len());
     let mut headers = HeaderMap::new();
 
     headers.insert(
@@ -83,7 +92,7 @@ async fn generate(
         HeaderValue::from_static("image/jpeg"),
     );
 
-    Ok((headers, data.to_vec()))
+    Ok((headers, image))
 }
 
 #[instrument(level = "info", skip(cache))]
