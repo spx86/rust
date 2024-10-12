@@ -8,7 +8,6 @@ use axum::{
     routing::get, 
     http::{StatusCode, HeaderValue, HeaderMap}, 
     Router,
-    middleware::AddExtension,
 };
 use bytes::Bytes;
 use lru::LruCache;
@@ -58,7 +57,7 @@ async fn main() {
     print_test_url("https://images.pexels.com/photos/1562477/pexels-photo-1562477.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
 
     info!("Listening on {}", addr);
-    let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
+    let listener = tokio::net::TcpListener::bind(&addr).await.unwrap();
     axum::serve(listener, app)
         .await
         .unwrap();
@@ -68,10 +67,11 @@ async fn generate(
     Path(Params{spec, url}): Path<Params>,
     Extension(cache): Extension<Cache>, 
 ) -> Result<(HeaderMap, Vec<u8>), StatusCode> {
-    let url = percent_decode_str(&url).decode_utf8_lossy();
     let spec: ImageSpec = spec.as_str()
         .try_into()
         .map_err(|_| StatusCode::BAD_REQUEST)?;
+
+    let url = percent_decode_str(&url).decode_utf8_lossy();
 
     let data = retrieve_image(&url, cache)
         .await

@@ -86,22 +86,21 @@ impl SpecTransform<&Fliph> for Photon {
 
 impl SpecTransform<&Filter> for Photon {
     fn transform(&mut self, op: &Filter) {
-        match filter::Filter::from_i32(op.filter) {
-            Some(filter::Filter::Unspecified) => {},
-            Some(f) => filters::filter(&mut self.0, f.to_str().unwrap()),
-            _ => {},
+        match filter::Filter::try_from(op.filter).unwrap() {
+            filter::Filter::Unspecified => {},
+            f => filters::filter(&mut self.0, f.to_str().unwrap()),
         }
     }
 }
 
 impl SpecTransform<&Resize> for Photon {
     fn transform(&mut self, op: &Resize) {
-        let img = match resize::ResizeType::from_i32(op.rtype).unwrap(){
+        let img = match resize::ResizeType::try_from(op.rtype).unwrap(){
             resize::ResizeType::Normal => transform::resize(
-            &mut self.0,
-                op.width, 
-                op.height, 
-                resize::SampleFilter::from_i32(op.filter).unwrap().into(),
+                &mut self.0,
+                    op.width, 
+                    op.height, 
+                    resize::SampleFilter::try_from(op.filter).unwrap().into()
             ),
             resize::ResizeType::SeamCarve => {
                 transform::seam_carve(&mut self.0, op.width, op.height)
@@ -124,6 +123,11 @@ fn image_to_buf(img: PhotonImage, format: ImageFormat) -> Vec<u8> {
 
     let img_buffer = ImageBuffer::from_vec(width, height, raw_pixels).unwrap();
     let dynimage = DynamicImage::ImageRgba8(img_buffer);
+
+    let dynimage = match format {
+        ImageFormat::Jpeg => DynamicImage::ImageRgb8(dynimage.to_rgb8()),
+        _ => dynimage,
+    };
 
     let mut buffer = Vec::with_capacity(32768);
     let mut cursor = Cursor::new(&mut buffer);
