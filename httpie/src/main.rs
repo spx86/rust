@@ -22,3 +22,4 @@ async fn main() -> Result<()>{
     let req = make_request(client, &args).await?;
     Ok(req)
 }
+
