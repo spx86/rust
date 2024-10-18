@@ -71,10 +71,15 @@ pub async fn query<T: AsRef<str>>(sql: T) -> Result<DataSet> {
 
     filtered = order_by
                 .into_iter()
-                .fold(filtered, |acc, (col, desc)| acc.sort(&col, desc));
+                .fold(filtered, |acc, (col, desc)| 
+                    acc.sort(vec![col].into_vec(), SortMultipleOptions::new()
+                .with_order_descending(desc)));
 
     if offset.is_some() || limit.is_some() {
-        filtered = filtered.slice(offset.unwrap_or(0), limit.unwrap_or(usize::MAX));
+        filtered = filtered.slice(
+            offset.unwrap_or(0),
+            limit.unwrap_or(usize::MAX).try_into().unwrap_or(u32::MAX)
+        );
     }
 
     Ok(DataSet(filtered.select(selection).collect()?))
