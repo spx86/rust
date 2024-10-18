@@ -1,7 +1,8 @@
+use std::io::Cursor;
+
 use crate::DataSet;
 use anyhow::Result;
-use polars::{io::csv, prelude::*};
-use std::{fmt::Result, io::Cursor};
+use polars::prelude::*;
 
 pub trait Load {
     type Error;
@@ -34,7 +35,6 @@ impl Load for Csvloader {
     
     fn load(self) -> Result<DataSet, Self::Error> {
         let df = CsvReader::new(Cursor::new(self.0))
-            .infer_schema(Some(16))
             .finish()?;
         Ok(DataSet(df))
     }
