@@ -41,7 +41,7 @@ impl<'a> TryFrom<&'a Statement> for Sql<'a> {
             Statement::Query(q) => {
                 let offset = q.offset.as_ref();
                 let limit = q.limit.as_ref();
-                let orders = &q.order_by;
+                let orders = q.order_by.as_ref().unwrap();
 
                 let Select {
                     from: table_with_joins,
@@ -68,8 +68,8 @@ impl<'a> TryFrom<&'a Statement> for Sql<'a> {
                 }
 
                 let mut order_by = Vec::new();
-                for expr in orders {
-                    order_by.push(Order(expr).try_into()?);
+                for expr in &orders.exprs {
+                    order_by.push(Order(&expr).try_into()?);
                 }
 
                 let offset = offset.map(|v| Offset(v).into());
@@ -93,17 +93,18 @@ impl<'a> TryFrom<&'a Statement> for Sql<'a> {
 impl TryFrom<Expression> for Expr {
     type Error = anyhow::Error;
     fn try_from(value: Expression) -> Result<Self, Self::Error> {
-        match value.0 {
+        match *value.0 {
             SqlExpr::BinaryOp { left, op, right } => Ok(Expr::BinaryExpr { 
-                left: Box::new(Expression(left).try_into()?),
+                left: Arc::new(Expression(left).try_into()?),
                 op: Operation(op).try_into()?, 
-                right: Box::new(Expression(right).try_into()?),
+                right: Arc::new(Expression(right).try_into()?),
             }),
-            SqlExpr::Wildcard => Ok(Self::Wildcard),
-            SqlExpr::IsNull(expr) => Ok(Self::IsNull(Box::new(Expression(expr).try_into()?))),
-            SqlExpr::IsNotNull(expr) => Ok(Self::IsNotNull(Box::new(Expression(expr).try_into()?))),
-            SqlExpr::Identifier(id) => Ok(Self::Column(Arc::new(id.value))),
-            SqlExpr::Value(v) => Ok(Self::Literal(Value(v).try_into()?)),
+            SqlExpr::Wildcard => Ok(Expr::Wildcard),
+            SqlExpr::IsNull(expr) => Ok(Self::is_null(Expression(expr).try_into()?)),
+            SqlExpr::IsNotNull(expr) => Ok(Self::is_not_null(Expression(expr).try_into()?)),
+            SqlExpr::Identifier(id) => Ok(Self::Column(PlSmallStr::from_string(id.value.to_string()))),
+
+            SqlExpr::Value(v) => Ok(Expr::Literal(Value(v).try_into()?)),
             v => Err(anyhow!("expr {:#?} is not supported", v)),
         }
     }
@@ -142,10 +143,10 @@ impl<'a> TryFrom<Projection<'a>> for Expr {
                 expr: SqlExpr::Identifier(id),
                 alias,
             } => Ok(Expr::Alias(
-                Box::new(Expr::Column(Arc::new(id.to_string()))),
-                Arc::new(alias.to_string()),
+                Arc::new(Expr::Column(PlSmallStr::from_string(id.to_string()))),
+                PlSmallStr::from_string(alias.to_string()),
             )),
-            SelectItem::QualifiedWildcard(v) => Ok(col(&v.to_string())),
+            SelectItem::QualifiedWildcard(v, _) => Ok(col(&v.to_string())),
             SelectItem::Wildcard(_) => Ok(col("*")),
             item => Err(anyhow!("projection {} not supported", item)),
         }
@@ -230,7 +231,7 @@ impl TryFrom<Value> for LiteralValue {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::TyrDialect;
+    use crate::dialect::TyrDialect;
     use sqlparser::parser::Parser;
 
     #[test]
