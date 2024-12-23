@@ -1,0 +1,2416 @@
+{
+  "categoryModelName": "医保局医疗信息分级分类模板",
+  "creator": "spengxu",
+  "categories": [
+    {
+      "level": "1",
+      "categoryName": "个人信息",
+      "categoryDescription": "个人信息",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "个人数据",
+          "categoryDescription": "个人数据",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "个人基本资料",
+              "categoryDescription": "自然人基本情况信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人姓名",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "姓名规则"
+                },
+                {
+                  "dataTypeName": "生日",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "生日"
+                },
+                {
+                  "dataTypeName": "年龄",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "年龄规则"
+                },
+                {
+                  "dataTypeName": "性别",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "性别规则"
+                },
+                {
+                  "dataTypeName": "民族",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "民族"
+                },
+                {
+                  "dataTypeName": "国籍",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "国籍"
+                },
+                {
+                  "dataTypeName": "籍贯",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "籍贯"
+                },
+                {
+                  "dataTypeName": "婚姻状况",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "婚姻状况"
+                },
+                {
+                  "dataTypeName": "兴趣爱好",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "兴趣爱好"
+                },
+                {
+                  "dataTypeName": "擅长",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "擅长"
+                },
+                {
+                  "dataTypeName": "血型",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "血型"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人身份基本信息 ",
+              "categoryDescription": "自然人身份信息的弱标识数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "证件类型",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "证件类型"
+                },
+                {
+                  "dataTypeName": "证件有效期",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "证件有效期"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人身份信息",
+              "categoryDescription": "直接标识自然人身份的信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "身份证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "身份证证件号码"
+                },
+                {
+                  "dataTypeName": "银行卡信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "银行卡信息"
+                },
+                {
+                  "dataTypeName": "军官证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "军官证证件号码"
+                },
+                {
+                  "dataTypeName": "护照证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "护照证件号码"
+                },
+                {
+                  "dataTypeName": "驾驶证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "驾驶证证件号码"
+                },
+                {
+                  "dataTypeName": "工作证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "工作证证件号码"
+                },
+                {
+                  "dataTypeName": "出入证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "出入证证件号码"
+                },
+                {
+                  "dataTypeName": "社保卡证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "社保卡证件号码"
+                },
+                {
+                  "dataTypeName": "居住证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "居住证证件号码"
+                },
+                {
+                  "dataTypeName": "港澳台通行证证件号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "港澳台通行证证件号码"
+                },
+                {
+                  "dataTypeName": "证件照片",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "证件照片"
+                },
+                {
+                  "dataTypeName": "影印件",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "影印件"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人联系方式",
+              "categoryDescription": "个人各类通信联系方式数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "邮编",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "邮政编码规则"
+                },
+                {
+                  "dataTypeName": "家庭住址",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "籍贯"
+                },
+                {
+                  "dataTypeName": "个人电话号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "联系电话"
+                },
+                {
+                  "dataTypeName": "电子邮件地址",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "电子邮箱规则"
+                },
+                {
+                  "dataTypeName": "微信号",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "微信号与联系方式规则"
+                },
+                {
+                  "dataTypeName": "户籍地址",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "籍贯"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人生物识别信息",
+              "categoryDescription": "用于身份鉴别的隐私个人生物特征样本数据与特征值数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "人脸",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "人脸"
+                },
+                {
+                  "dataTypeName": "步态",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "步态"
+                },
+                {
+                  "dataTypeName": "声纹",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "声纹"
+                },
+                {
+                  "dataTypeName": "基因",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "基因"
+                },
+                {
+                  "dataTypeName": "笔迹",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "笔迹"
+                },
+                {
+                  "dataTypeName": "掌纹",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "掌纹"
+                },
+                {
+                  "dataTypeName": "耳廓",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "耳廓"
+                },
+                {
+                  "dataTypeName": "眼纹",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "眼纹"
+                },
+                {
+                  "dataTypeName": "指纹",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "指纹"
+                },
+                {
+                  "dataTypeName": "虹膜",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "虹膜"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "网络身份标识信息",
+              "categoryDescription": "可直接标识网络或通信用户身份的信息及账户相关资料信息（金融账户除外）",
+              "dateTypes": [
+                {
+                  "dataTypeName": "用户账号",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "用户账号"
+                },
+                {
+                  "dataTypeName": "用户ID",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "用户ID"
+                },
+                {
+                  "dataTypeName": "即时通信账号",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "即时通信账号"
+                },
+                {
+                  "dataTypeName": "网络社交用户账号",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "网络社交用户账号"
+                },
+                {
+                  "dataTypeName": "用户头像",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "用户头像"
+                },
+                {
+                  "dataTypeName": "昵称",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "昵称"
+                },
+                {
+                  "dataTypeName": "个性签名",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "个性签名"
+                },
+                {
+                  "dataTypeName": "IP地址",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "IP地址"
+                },
+                {
+                  "dataTypeName": "账户开立时间",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "账户开立时间"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人财产信息",
+              "categoryDescription": "个人的财产数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人收入状况",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "个人收入状况"
+                },
+                {
+                  "dataTypeName": "拥有的不动产状况",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "拥有的不动产状况"
+                },
+                {
+                  "dataTypeName": "拥有的车辆状况",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "拥有的车辆状况"
+                },
+                {
+                  "dataTypeName": "纳税额",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "纳税额"
+                },
+                {
+                  "dataTypeName": "公积金缴存金额",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "公积金缴存金额"
+                },
+                {
+                  "dataTypeName": "个人社保与医保存缴金额",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "个人社保与医保存缴金额"
+                },
+                {
+                  "dataTypeName": "虚拟资产",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "虚拟资产"
+                },
+                {
+                  "dataTypeName": "征信信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "征信信息"
+                },
+                {
+                  "dataTypeName": "消费记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "消费记录"
+                },
+                {
+                  "dataTypeName": "消费流水",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "消费流水"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人教育信息",
+              "categoryDescription": "个人受教育情况的记录数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "学历",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "学历"
+                },
+                {
+                  "dataTypeName": "学位",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "学位"
+                },
+                {
+                  "dataTypeName": "教育经历",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "教育经历"
+                },
+                {
+                  "dataTypeName": "成绩单",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "成绩单"
+                },
+                {
+                  "dataTypeName": "培训记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "培训记录"
+                },
+                {
+                  "dataTypeName": "奖惩信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "奖惩信息"
+                },
+                {
+                  "dataTypeName": "受资助信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "受资助信息"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人资质信息",
+              "categoryDescription": "指个人获得资质证书的记录数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "资质证书名称",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "资质证书名称"
+                },
+                {
+                  "dataTypeName": "资质证书类别",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "资质证书类别"
+                },
+                {
+                  "dataTypeName": "资质证书的编号",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "资质证书的编号"
+                },
+                {
+                  "dataTypeName": "颁发机构",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "颁发机构"
+                },
+                {
+                  "dataTypeName": "生效日期",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "生效日期"
+                },
+                {
+                  "dataTypeName": "到期日期",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "到期日期"
+                },
+                {
+                  "dataTypeName": "执业范围",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "执业范围"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人工作信息",
+              "categoryDescription": "个人求职和工作情况相关信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人职业",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "个人职业"
+                },
+                {
+                  "dataTypeName": "职位",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "职位"
+                },
+                {
+                  "dataTypeName": "职称",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "职称"
+                },
+                {
+                  "dataTypeName": "工作单位",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "工作单位"
+                },
+                {
+                  "dataTypeName": "工作地点",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "工作地点"
+                },
+                {
+                  "dataTypeName": "工作经历",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "工作经历"
+                },
+                {
+                  "dataTypeName": "工作表现",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "工作表现"
+                },
+                {
+                  "dataTypeName": "奖惩信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "奖惩信息"
+                },
+                {
+                  "dataTypeName": "简历",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "简历"
+                },
+                {
+                  "dataTypeName": "工牌",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "工牌"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人荣誉信息",
+              "categoryDescription": "指在某个领域获得荣誉、奖励的信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "荣誉信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "荣誉信息"
+                },
+                {
+                  "dataTypeName": "奖励信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "奖励信息"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "身份鉴别信息",
+              "categoryDescription": "用于身份鉴别的数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "账户登录密码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "账户登录密码"
+                },
+                {
+                  "dataTypeName": "银行卡密码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "银行卡密码"
+                },
+                {
+                  "dataTypeName": "支付密码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "支付密码"
+                },
+                {
+                  "dataTypeName": "账户查询密码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "账户查询密码"
+                },
+                {
+                  "dataTypeName": "交易密码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "交易密码"
+                },
+                {
+                  "dataTypeName": "银行卡有效期",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "银行卡有效期"
+                },
+                {
+                  "dataTypeName": "银行卡片验证码（CVN 和 CVN2）",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "银行卡片验证码（CVN 和 CVN2）"
+                },
+                {
+                  "dataTypeName": "USBKEY",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "USBKEY"
+                },
+                {
+                  "dataTypeName": "动态口令",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "动态口令"
+                },
+                {
+                  "dataTypeName": "U 盾（网银、手机银行密保工具信息）",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "U 盾（网银、手机银行密保工具信息）"
+                },
+                {
+                  "dataTypeName": "短信验证码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "短信验证码"
+                },
+                {
+                  "dataTypeName": "密码提示问题答案",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "密码提示问题答案"
+                },
+                {
+                  "dataTypeName": "手机客服密码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "手机客服密码"
+                },
+                {
+                  "dataTypeName": "个人数字证书",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "个人数字证书"
+                },
+                {
+                  "dataTypeName": "随机令牌",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "随机令牌"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人通信信息",
+              "categoryDescription": "等通信内容（如文字、图片、音频、视频、文件等），及描述个人通信的元数据（如通话时长）等",
+              "dateTypes": [
+                {
+                  "dataTypeName": "通信记录，短信",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "通信记录，短信"
+                },
+                {
+                  "dataTypeName": "彩信",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "彩信"
+                },
+                {
+                  "dataTypeName": "话音",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "话音"
+                },
+                {
+                  "dataTypeName": "即时通信",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "即时通信"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人关系信息P",
+              "categoryDescription": "个人间关系信息：描述个人与关联方关系的信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "通讯录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "通讯录"
+                },
+                {
+                  "dataTypeName": "好友列表",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "好友列表"
+                },
+                {
+                  "dataTypeName": "群列表",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "群列表"
+                },
+                {
+                  "dataTypeName": "电子邮件地址列表",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "电子邮件地址列表"
+                },
+                {
+                  "dataTypeName": "家庭关系",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "家庭关系"
+                },
+                {
+                  "dataTypeName": "工作关系",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "工作关系"
+                },
+                {
+                  "dataTypeName": "社交关系",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "社交关系"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人关系信息C",
+              "categoryDescription": "公司间关系信息：指用于描述个人与单位关联方关系的记录数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "法定代表人",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 1,
+                  "dataFeature": "法定代表人"
+                },
+                {
+                  "dataTypeName": "财务负责人",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 1,
+                  "dataFeature": "财务负责人"
+                },
+                {
+                  "dataTypeName": "业务经办人",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 1,
+                  "dataFeature": "业务经办人"
+                },
+                {
+                  "dataTypeName": "一般座员",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 1,
+                  "dataFeature": "一般座员"
+                },
+                {
+                  "dataTypeName": "高管人员",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 1,
+                  "dataFeature": "高管人员"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人操作记录",
+              "categoryDescription": "个人在业务服务过程中的操作记录和行为数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "网页浏览记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "网页浏览记录"
+                },
+                {
+                  "dataTypeName": "软件使用记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "软件使用记录"
+                },
+                {
+                  "dataTypeName": "点击记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "点击记录"
+                },
+                {
+                  "dataTypeName": "Cookie",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "Cookie"
+                },
+                {
+                  "dataTypeName": "发布的社交信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "发布的社交信息"
+                },
+                {
+                  "dataTypeName": "点击记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "点击记录"
+                },
+                {
+                  "dataTypeName": "收藏列表",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "收藏列表"
+                },
+                {
+                  "dataTypeName": "搜索记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "搜索记录"
+                },
+                {
+                  "dataTypeName": "服务使用时间",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "服务使用时间"
+                },
+                {
+                  "dataTypeName": "下载记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "下载记录"
+                },
+                {
+                  "dataTypeName": "访问时间（含登录时间、退出时间）",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "访问时间（含登录时间、退出时间）"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "业务行为数据",
+              "categoryDescription": "用户使用某业务的行为记录",
+              "dateTypes": [
+                {
+                  "dataTypeName": "用户游戏登录时间",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "用户游戏登录时间"
+                },
+                {
+                  "dataTypeName": "最近充值时间",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "最近充值时间"
+                },
+                {
+                  "dataTypeName": "累计充值额度",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "累计充值额度"
+                },
+                {
+                  "dataTypeName": "用户通关记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "用户通关记录"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人常用设备信息",
+              "categoryDescription": "常用设备的可变唯一标识",
+              "dateTypes": [
+                {
+                  "dataTypeName": "Android ID",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "Android ID"
+                },
+                {
+                  "dataTypeName": "IDFA",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "IDFA"
+                },
+                {
+                  "dataTypeName": "IDFV",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "IDFV"
+                },
+                {
+                  "dataTypeName": "OAID",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "OAID"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "",
+              "categoryDescription": "常用设备的不可变唯一标识",
+              "dateTypes": [
+                {
+                  "dataTypeName": "设备 MAC 地址",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "设备 MAC 地址"
+                },
+                {
+                  "dataTypeName": "IMEI",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "IMEI"
+                },
+                {
+                  "dataTypeName": "IMSI",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "IMSI"
+                },
+                {
+                  "dataTypeName": "MEID",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "MEID"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人位置信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "行踪轨迹",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "行踪轨迹"
+                },
+                {
+                  "dataTypeName": "精准定位信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "精准定位信息"
+                },
+                {
+                  "dataTypeName": "酒店住宿信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "酒店住宿信息"
+                },
+                {
+                  "dataTypeName": "经纬度",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "经纬度"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "应用软件列表",
+              "categoryDescription": "终端上安装的应用程序列表",
+              "dateTypes": [
+                {
+                  "dataTypeName": "每款应用软件的名称",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "每款应用软件的名称"
+                },
+                {
+                  "dataTypeName": "版本",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "版本"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人标签信息",
+              "categoryDescription": "基于个人上网记录等各类个人信息加工产生的用于对个人用户分类分析的描述信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "App 偏好",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "App 偏好"
+                },
+                {
+                  "dataTypeName": "关系标签",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "关系标签"
+                },
+                {
+                  "dataTypeName": "终端偏好",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "终端偏好"
+                },
+                {
+                  "dataTypeName": "内容偏好",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "内容偏好"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人运动信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "步数",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "步数"
+                },
+                {
+                  "dataTypeName": "步频",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "步频"
+                },
+                {
+                  "dataTypeName": "运动时长",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "运动时长"
+                },
+                {
+                  "dataTypeName": "运动距离",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "运动距离"
+                },
+                {
+                  "dataTypeName": "运动方式",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "运动方式"
+                },
+                {
+                  "dataTypeName": "运动心率",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 2,
+                  "dataFeature": "运动心率"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人党政信息",
+              "categoryDescription": "指个人政治面貌相关数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "党派所属",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "党派所属"
+                },
+                {
+                  "dataTypeName": "加入党派时间",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "加入党派时间"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "交易信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "支付信息",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "支付信息"
+                },
+                {
+                  "dataTypeName": "消费金额",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "消费金额"
+                },
+                {
+                  "dataTypeName": "交易记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "交易记录"
+                },
+                {
+                  "dataTypeName": "发票号码",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "发票号码"
+                },
+                {
+                  "dataTypeName": "收费类别",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "收费类别"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人保险信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "保险账号",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "保险账号"
+                },
+                {
+                  "dataTypeName": "保险状态",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "保险状态"
+                },
+                {
+                  "dataTypeName": "保险金额",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "保险金额"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "死亡信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "死亡日期",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "死亡日期"
+                },
+                {
+                  "dataTypeName": "死亡地点",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "死亡地点"
+                },
+                {
+                  "dataTypeName": "死亡原因",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "死亡原因"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "其他个人信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "性取向",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "性取向"
+                },
+                {
+                  "dataTypeName": "婚史",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "婚史"
+                },
+                {
+                  "dataTypeName": "宗教信仰",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "宗教信仰"
+                },
+                {
+                  "dataTypeName": "未公开的违法犯罪记录",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 4,
+                  "dataFeature": "未公开的违法犯罪记录"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "医疗数据",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "医疗卫生资源信息",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "医院基本数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "医疗机构名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗机构名称"
+                },
+                {
+                  "dataTypeName": "医疗机构类别",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗机构类别"
+                },
+                {
+                  "dataTypeName": "医院学科门类",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医院学科门类"
+                },
+                {
+                  "dataTypeName": "床位数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "床位数"
+                },
+                {
+                  "dataTypeName": "医院地址",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医院地址"
+                },
+                {
+                  "dataTypeName": "电话",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "电话"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "医疗应用数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "医院应用基本数据",
+              "categoryDescription": "指在医疗服务过程中，医院内提供服务的基础数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "门诊号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "门诊号"
+                },
+                {
+                  "dataTypeName": "科室名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "名称规则"
+                },
+                {
+                  "dataTypeName": "科室编码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "编号规则"
+                },
+                {
+                  "dataTypeName": "科室类型",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "类型规则"
+                },
+                {
+                  "dataTypeName": "院区编码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "编号规则"
+                },
+                {
+                  "dataTypeName": "住院号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "编号规则"
+                },
+                {
+                  "dataTypeName": "病区名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "名称规则"
+                },
+                {
+                  "dataTypeName": "病床号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "编号规则"
+                },
+                {
+                  "dataTypeName": "病房号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "编号规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "医疗服务基本数据",
+              "categoryDescription": "记录患者的就诊和检测过程的基本情况的数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "就诊时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "就诊完成时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "出院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "住院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "就诊次数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "检测时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "手术记录",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "手术间编号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术间编号"
+                },
+                {
+                  "dataTypeName": "术前诊断",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "术前诊断"
+                },
+                {
+                  "dataTypeName": "术后诊断",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "术后诊断"
+                },
+                {
+                  "dataTypeName": "手术开始日期时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术开始日期时间"
+                },
+                {
+                  "dataTypeName": "手术结束日期时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术结束日期时间"
+                },
+                {
+                  "dataTypeName": "手术/操作代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术/操作代码"
+                },
+                {
+                  "dataTypeName": "手术名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术名称"
+                },
+                {
+                  "dataTypeName": "手术级别",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术级别"
+                },
+                {
+                  "dataTypeName": "手术目标部位名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术目标部位名称"
+                },
+                {
+                  "dataTypeName": "手术日\n期时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术日\n期时间"
+                },
+                {
+                  "dataTypeName": "介入物名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "介入物名称"
+                },
+                {
+                  "dataTypeName": "手术体位代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术体位代码"
+                },
+                {
+                  "dataTypeName": "手术过程描\n述",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术过程描\n述"
+                },
+                {
+                  "dataTypeName": "手术标志",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术标志"
+                },
+                {
+                  "dataTypeName": "手术切口描述",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "手术切口描述"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "门（急）诊病历索引数据",
+              "categoryDescription": "用于唯一标识患者及其就诊记录的关联信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "病历号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "病历号"
+                },
+                {
+                  "dataTypeName": "病历索引",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "病历索引"
+                },
+                {
+                  "dataTypeName": "病历二维码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "病历二维码"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "健康状况数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "过敏史",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "过敏史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏史"
+                },
+                {
+                  "dataTypeName": "过敏原",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏原"
+                },
+                {
+                  "dataTypeName": "过敏症状",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏症状"
+                },
+                {
+                  "dataTypeName": "过敏症状代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏症状代码"
+                },
+                {
+                  "dataTypeName": "过敏原代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏原代码"
+                },
+                {
+                  "dataTypeName": "过敏药物名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏药物名称"
+                },
+                {
+                  "dataTypeName": "过敏病情状态代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏病情状态代码"
+                },
+                {
+                  "dataTypeName": "过敏严重性代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏严重性代码"
+                },
+                {
+                  "dataTypeName": "过敏史代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "过敏史代码"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "检查检验基本数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "检验方法名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "检验方法名称"
+                },
+                {
+                  "dataTypeName": "检验项目名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "检验项目名称"
+                },
+                {
+                  "dataTypeName": "检验类别",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "检验类别"
+                },
+                {
+                  "dataTypeName": "检验项目代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "检验项目代码"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "检查检验数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "尿液检验结果",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "尿液检验结果"
+                },
+                {
+                  "dataTypeName": "血液检验结果",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "血液检验结果"
+                },
+                {
+                  "dataTypeName": "检验结果代码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "检验结果代码"
+                },
+                {
+                  "dataTypeName": "肝功能检验结果",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "肝功能检查检验数据规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "主述",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "主诉",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "主述规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "既往病史",
+              "categoryDescription": "既往疾病史，记录患者过去的疾病情况",
+              "dateTypes": [
+                {
+                  "dataTypeName": "疾病史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "疾病史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "既往传染病史",
+              "categoryDescription": "既往传染病史，记录患者过去的传染病经历",
+              "dateTypes": [
+                {
+                  "dataTypeName": "传染病史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "传染病史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人吸烟史",
+              "categoryDescription": "个人吸烟史，记录患者的吸烟习惯",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人吸烟史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "个人吸烟史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "个人饮酒史",
+              "categoryDescription": "个人饮酒史，记录患者的饮酒习惯",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人饮酒史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "个人饮酒史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "家族史",
+              "categoryDescription": "家族史，记录家族成员的健康状况",
+              "dateTypes": [
+                {
+                  "dataTypeName": "家族史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "家族史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "月经史",
+              "categoryDescription": "月经史，记录女性患者的月经周期和相关情况",
+              "dateTypes": [
+                {
+                  "dataTypeName": "月经史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "月经史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "生育史",
+              "categoryDescription": "生育史，记录女性患者的生育经历",
+              "dateTypes": [
+                {
+                  "dataTypeName": "生育史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "生育史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "用药史",
+              "categoryDescription": "用药史，记录患者用药情况",
+              "dateTypes": [
+                {
+                  "dataTypeName": "用药史",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "用药史"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "体格检查（体征）",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "体征信息检查记录",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "体征信息检查记录"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "诊断记录",
+              "categoryDescription": "患者诊断结果记录",
+              "dateTypes": [
+                {
+                  "dataTypeName": "诊断 icd 编码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "诊断编码规则"
+                },
+                {
+                  "dataTypeName": "诊断编码对照",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "编码对照规则"
+                },
+                {
+                  "dataTypeName": "诊断名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "诊断名称规则"
+                },
+                {
+                  "dataTypeName": "诊断症候",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "诊断症状规则"
+                },
+                {
+                  "dataTypeName": "诊断时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "诊断时间规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "就诊记录基本信息",
+              "categoryDescription": "患者就诊记录",
+              "dateTypes": [
+                {
+                  "dataTypeName": "诊断类型",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "诊断类型"
+                },
+                {
+                  "dataTypeName": "类别",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "类别"
+                },
+                {
+                  "dataTypeName": "诊断序号",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "诊断序号"
+                },
+                {
+                  "dataTypeName": "诊疗类型编码",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "诊疗类型编码"
+                },
+                {
+                  "dataTypeName": "就诊表示",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "就诊表示"
+                },
+                {
+                  "dataTypeName": "就诊时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "就诊时间"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "医疗科研数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "科研成果数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "专利",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "专利"
+                },
+                {
+                  "dataTypeName": "论文",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "论文"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "科研项目数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "课题",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "课题"
+                },
+                {
+                  "dataTypeName": "项目成员",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "项目成员"
+                },
+                {
+                  "dataTypeName": "项目资金",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "项目资金"
+                },
+                {
+                  "dataTypeName": "项目状态",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "项目状态"
+                },
+                {
+                  "dataTypeName": "项目情况",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "项目情况"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "科研基本信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "专利名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "专利名称"
+                },
+                {
+                  "dataTypeName": "专利类型",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "专利类型"
+                },
+                {
+                  "dataTypeName": "论文名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "论文名称"
+                },
+                {
+                  "dataTypeName": "期刊",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "期刊"
+                },
+                {
+                  "dataTypeName": "发表时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "发表时间"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "医疗组管理数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "医疗组基本信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "医疗组名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗组名称"
+                },
+                {
+                  "dataTypeName": "医疗组组长",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗组组长"
+                },
+                {
+                  "dataTypeName": "医疗组管理",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗组管理"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "医疗数字身份数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "数字身份签名记录",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "签章来源",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "签章来源"
+                },
+                {
+                  "dataTypeName": "签章授权，授权时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "签章授权，授权时间"
+                },
+                {
+                  "dataTypeName": "签章数据类型",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "签章数据类型"
+                },
+                {
+                  "dataTypeName": "签章数据",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "签章数据"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "数字身份信息",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "DID",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "DID"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "医疗运行数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "运营统计数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "处方数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "处方数"
+                },
+                {
+                  "dataTypeName": "检验数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "检验数"
+                },
+                {
+                  "dataTypeName": "治疗数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "治疗数"
+                },
+                {
+                  "dataTypeName": "手术数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "手术数"
+                },
+                {
+                  "dataTypeName": "病历数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "病历数"
+                },
+                {
+                  "dataTypeName": "检查数",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 3,
+                  "dataFeature": "检查数"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "系统运行",
+      "categoryDescription": "系统运行",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "系统运行数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "系统运行的鉴别数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "网络设备",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "网络设备"
+                },
+                {
+                  "dataTypeName": "服务器",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "服务器"
+                },
+                {
+                  "dataTypeName": "数据库",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "数据库"
+                },
+                {
+                  "dataTypeName": "应用系统账号密码信息",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "应用系统账号密码信息"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "系统建设类数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "网络架构拓扑",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "网络架构拓扑"
+                },
+                {
+                  "dataTypeName": "IP地址规划",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "IP地址规划"
+                },
+                {
+                  "dataTypeName": "系统架构设计",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "系统架构设计"
+                },
+                {
+                  "dataTypeName": "代码",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "代码"
+                },
+                {
+                  "dataTypeName": "算法",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "算法"
+                },
+                {
+                  "dataTypeName": "开发需求文档",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "开发需求文档"
+                },
+                {
+                  "dataTypeName": "系统功能说明书",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "系统功能说明书"
+                },
+                {
+                  "dataTypeName": "流程文档",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "流程文档"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "系统运行状况",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "网络及系统的运行统计分析数据",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 4,
+                  "dataFeature": "网络及系统的运行统计分析数据"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "系统配置数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "网络",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "网络"
+                },
+                {
+                  "dataTypeName": "服务器",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "服务器"
+                },
+                {
+                  "dataTypeName": "数据库及系统监控数据",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "数据库及系统监控数据"
+                },
+                {
+                  "dataTypeName": "网络",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "网络"
+                },
+                {
+                  "dataTypeName": "服务器",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "服务器"
+                },
+                {
+                  "dataTypeName": "数据库及系统配置信息",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "数据库及系统配置信息"
+                },
+                {
+                  "dataTypeName": "日志信息",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "日志信息"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "系统管理类数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "元数据",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "元数据"
+                },
+                {
+                  "dataTypeName": "数据标准",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "数据标准"
+                },
+                {
+                  "dataTypeName": "数据质量",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "数据质量"
+                },
+                {
+                  "dataTypeName": "外部采购数据",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "外部采购数据"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "安全保障类数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "安全审计记录",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "安全审计记录"
+                },
+                {
+                  "dataTypeName": "应急事件记录",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "应急事件记录"
+                },
+                {
+                  "dataTypeName": "评估记录",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "评估记录"
+                },
+                {
+                  "dataTypeName": "安全技术规划文件",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "安全技术规划文件"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "数据库标识数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "标识数据",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "标识数据"
+                },
+                {
+                  "dataTypeName": "数据创建",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "数据创建"
+                },
+                {
+                  "dataTypeName": "更新修改时间",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "更新修改时间"
+                },
+                {
+                  "dataTypeName": "数据状态标识",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "数据状态标识"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "权限控制数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "权限标识数据",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "权限标识数据"
+                },
+                {
+                  "dataTypeName": "权限描述",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "权限描述"
+                },
+                {
+                  "dataTypeName": "权限类型",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "权限类型"
+                },
+                {
+                  "dataTypeName": "权限策略",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "权限策略"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "上链记录数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "上链状态",
+                  "attributeIdentifier": "系统",
+                  "dataLevel": 3,
+                  "dataFeature": "上链状态"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -35,6 +35,8 @@ pub struct Value(pub(crate) SqlValue);
 
 impl<'a> TryFrom<&'a Statement> for Sql<'a> {
     type Error = anyhow::Error;
+    
+
 
     fn try_from(value: &'a Statement) -> Result<Self, Self::Error> {
         match value {

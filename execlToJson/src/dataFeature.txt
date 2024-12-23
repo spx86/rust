@@ -1,0 +1,1226 @@
+{
+    "dataFeatureName": "肝功能检查检验数据规则",
+    "featureType": "正则",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "REGEX",
+            "pattern": "(谷丙转氨酶|谷草转氨酶|同型半胱氨酸|总胆红素|直接胆红素|间接胆红素|白蛋白|球蛋白|总蛋白|谷草/谷丙转氨酶|载脂蛋白B|载脂蛋白A|总胆固醇|甘油三酯|谷氨酰转肽酶|碱性磷酸酶|磷酸肌酸激酶|α羟丁酸脱氢酶|乳酸脱氢酶|磷酸肌酸激酶同工酶|肌酐|视黄醇结合蛋白)",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "REGEX",
+            "pattern": "(谷丙转氨酶|谷草转氨酶|同型半胱氨酸|总胆红素|直接胆红素|间接胆红素|白蛋白|球蛋白|总蛋白|谷草/谷丙转氨酶|载脂蛋白B|载脂蛋白A|总胆固醇|甘油三酯|谷氨酰转肽酶|碱性磷酸酶|磷酸肌酸激酶|α羟丁酸脱氢酶|乳酸脱氢酶|磷酸肌酸激酶同工酶|肌酐|视黄醇结合蛋白)",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "REGEX",
+            "pattern": "FLOAT|DOUBLE|INTEGER",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[-+]?\\d+(\\.\\d+)?$",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "tableName",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*hepatopathy.*|.*肝病.*",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "tableDescription",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*肝病.*信息.*",
+            "weight": 0.1,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "主述规则",
+    "featureType": "字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "主述,主诉",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "主述,主诉",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "[\\u4e00-\\u9fa5]{1,20}|[a-zA-Z\\s]{2,50}",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "tableName",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*hepatopathy.*|.*肝病.*",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "tableDescription",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*肝病.*信息.*",
+            "weight": 0.1,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "邮政编码规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "邮政编码,邮编,邮政编码",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "邮政编码,邮编,邮政编码",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[1-9]\\d{5}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "电子邮箱规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "电子邮箱,邮箱,email",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "电子邮箱,邮箱,email",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "微信号与联系方式规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "微信号,微信,WeChat",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "微信号,微信,WeChat",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[a-zA-Z][a-zA-Z0-9_-]{5,19}$", 
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "诊断编码规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "诊断 icd 编码,ICD编码,诊断编码",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "诊断 icd 编码,ICD编码,诊断编码",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[A-Z]{1,4}\\d{1,7}$", 
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "编码对照规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "诊断编码对照,诊断编码映射",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "诊断编码对照,诊断编码映射",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[A-Z]{1,4}\\d{1,7}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "诊断名称规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "诊断名称,诊断病名",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "诊断名称,诊断病名",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^.{1,100}$",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "tableName",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*hepatopathy.*|.*肝病.*",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "tableDescription",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*肝病.*信息.*",
+            "weight": 0.1,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "诊断症状规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "诊断症候,诊断症状,症候",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "诊断症候,诊断症状,症候",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^.{1,100}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "诊断时间规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "诊断时间,诊断日期",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "诊断时间,诊断日期",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "DATE,TIMESTAMP",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "医疗时间规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "就诊时间,就诊完成时间,出院时间,住院时间,检测时间",
+            "weight": 0.3,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "就诊时间,就诊完成时间,出院时间,住院时间,检测时间",
+            "weight": 0.3,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "DATE,TIMESTAMP",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}(\\s\\d{2}:\\d{2}:\\d{2})?$",
+            "weight": 0.2,
+            "operator": "AND"
+        }
+
+    ]
+}
+
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "就诊次数",
+            "weight": 0.1,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "就诊次数",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "INTEGER,INT",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^\\d+$",
+            "weight": 0.2,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "编号规则",
+    "featureType": "正则",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "门诊号,住院号,科室编码,院区编码",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "门诊号,住院号,科室编码,院区编码",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[a-zA-Z0-9-]{1,20}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "名称规则",
+    "featureType": "正则",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "科室名称,病区名称,科室",
+            "weight": 0.2,
+            "operator": "START"
+        },
+                {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "科室名称,病区名称,科室",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[\\u4e00-\\u9fa5a-zA-Z\\s]{1,50}$",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "tableName",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*hepatopathy.*|.*肝病.*",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "tableDescription",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*肝病.*信息.*",
+            "weight": 0.1,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+
+{
+    "dataFeatureName": "类型规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "科室类型",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "科室类型",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "DICT",
+            "pattern": "内科,外科,儿科,妇产科,急诊科,ICU",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "组合字段规则",
+    "featureType": "正则",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "病床号, 病房号",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "病床号, 病房号",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[a-zA-Z0-9-]{1,10}\\s?[a-zA-Z0-9-]{1,10}$",
+            "weight": 0.6,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+{
+    "dataFeatureName": "数据库标识规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "ID, jxzh, 标识",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "ID, jxzh, 标识",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "DICT",
+            "pattern": "^[a-zA-Z0-9-]{1,10}\\s?[a-zA-Z0-9-]{1,10}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{
+  "categoryModelName": "医保局医疗信息分级分类模板1",
+  "creator": "spengxu",
+  "categories": [
+    {
+      "level": "1",
+      "categoryName": "个人信息",
+      "categoryDescription": "个人信息",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "个人数据",
+          "categoryDescription": "个人数据",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "个人基本资料",
+              "categoryDescription": "自然人基本情况信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人姓名",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "姓名规则"
+                },
+                {
+                  "dataTypeName": "生日",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "生日"
+                },
+                {
+                  "dataTypeName": "年龄",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "年龄规则"
+                },
+                {
+                  "dataTypeName": "性别",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "性别规则"
+                },
+                {
+                  "dataTypeName": "民族",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "民族"
+                },
+                {
+                  "dataTypeName": "国籍",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "国籍"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "医疗数据",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "医疗应用数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "医院应用基本数据",
+              "categoryDescription": "指在医疗服务过程中，医院内提供服务的基础数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "科室名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "名称规则"
+                },
+                {
+                  "dataTypeName": "病区名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "名称规则1"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "医疗服务基本数据",
+              "categoryDescription": "记录患者的就诊和检测过程的基本情况的数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "就诊时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "就诊完成时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则1"
+                },
+                {
+                  "dataTypeName": "出院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则2"
+                },
+                {
+                  "dataTypeName": "住院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则3"
+                },
+                {
+                  "dataTypeName": "检测时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "健康状况数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "检查检验数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "肝功能检验结果",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "肝功能检查检验数据规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "主述",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "主诉",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "主述规则"
+                }
+              ]
+            }
+          ]
+        }  
+      ]
+    }
+    
+  ]
+}
+
+
+
+
+
+
+{
+    "dataFeatureName": "数据库标识规则",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "ID, jxzh, 标识",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "ID, jxzh, 标识",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "DICT",
+            "pattern": "^[a-zA-Z0-9-]{1,10}\\s?[a-zA-Z0-9-]{1,10}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "数据库标识规则1",
+    "featureType": "正则+字典",
+    "confidenceThreshold": 0,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "DICT",
+            "pattern": "ID, jxzh, 标识",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "DICT",
+            "pattern": "ID, jxzh, 标识",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "DICT",
+            "pattern": "VARCHAR,CHAR,TEXT",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "DICT",
+            "pattern": "^[a-zA-Z0-9-]{1,10}\\s?[a-zA-Z0-9-]{1,10}$",
+            "weight": 0.4,
+            "operator": "AND"
+        }
+    ]
+}
+
+{
+    "dataFeatureName": "肝功能检查检验数据规则",
+    "featureType": "正则",
+    "confidenceThreshold": 0.6,
+    "creator": "spengxu",
+    "basicRules": [
+        {
+            "target": "fieldName",
+            "ruleType": "REGEX",
+            "pattern": "(谷丙转氨酶|谷草转氨酶|同型半胱氨酸|总胆红素|直接胆红素|间接胆红素|白蛋白|球蛋白|总蛋白|谷草/谷丙转氨酶|载脂蛋白B|载脂蛋白A|总胆固醇|甘油三酯|谷氨酰转肽酶|碱性磷酸酶|磷酸肌酸激酶|α羟丁酸脱氢酶|乳酸脱氢酶|磷酸肌酸激酶同工酶|肌酐|视黄醇结合蛋白)",
+            "weight": 0.2,
+            "operator": "START"
+        },
+        {
+            "target": "fieldDescription",
+            "ruleType": "REGEX",
+            "pattern": "(谷丙转氨酶|谷草转氨酶|同型半胱氨酸|总胆红素|直接胆红素|间接胆红素|白蛋白|球蛋白|总蛋白|谷草/谷丙转氨酶|载脂蛋白B|载脂蛋白A|总胆固醇|甘油三酯|谷氨酰转肽酶|碱性磷酸酶|磷酸肌酸激酶|α羟丁酸脱氢酶|乳酸脱氢酶|磷酸肌酸激酶同工酶|肌酐|视黄醇结合蛋白)",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldType",
+            "ruleType": "REGEX",
+            "pattern": "FLOAT|DOUBLE|INTEGER",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "fieldValue",
+            "ruleType": "REGEX",
+            "pattern": "^[-+]?\\d+(\\.\\d+)?$",
+            "weight": 0.2,
+            "operator": "AND"
+        },
+        {
+            "target": "tableName",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*hepatopathy.*|.*肝病.*",
+            "weight": 0.1,
+            "operator": "AND"
+        },
+        {
+            "target": "tableDescription",
+            "ruleType": "REGEX",
+            "pattern": "(?i).*肝病.*信息.*",
+            "weight": 0.1,
+            "operator": "AND"
+        }
+    ]
+}
+
+
+
+
+{
+  "categoryModelName": "医保局医疗信息",
+  "creator": "spengxu",
+  "categories": [
+    {
+      "level": "1",
+      "categoryName": "个人信息",
+      "categoryDescription": "个人信息",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "个人数据",
+          "categoryDescription": "个人数据",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "个人基本资料",
+              "categoryDescription": "自然人基本情况信息",
+              "dataTypes": [
+                {
+                  "dataTypeName": "个人姓名",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "姓名规则"
+                },
+                {
+                  "dataTypeName": "生日",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "生日"
+                },
+                {
+                  "dataTypeName": "年龄",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "年龄规则"
+                },
+                {
+                  "dataTypeName": "性别",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "性别规则"
+                },
+                {
+                  "dataTypeName": "民族",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "民族"
+                },
+                {
+                  "dataTypeName": "国籍",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "国籍"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "医疗数据",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "医疗应用数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "医院应用基本数据",
+              "categoryDescription": "指在医疗服务过程中，医院内提供服务的基础数据",
+              "dataTypes": [
+                {
+                  "dataTypeName": "科室名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "名称规则"
+                },
+                {
+                  "dataTypeName": "病区名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "名称规则1"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "医疗服务基本数据",
+              "categoryDescription": "记录患者的就诊和检测过程的基本情况的数据",
+              "dataTypes": [
+                {
+                  "dataTypeName": "就诊时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "就诊完成时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "医疗时间规则1"
+                },
+                {
+                  "dataTypeName": "出院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "医疗时间规则2"
+                },
+                {
+                  "dataTypeName": "入院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "医疗时间规则3"
+                },
+                {
+                  "dataTypeName": "检测时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "医疗时间规则4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "健康状况数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "检查检验数据",
+              "categoryDescription": "",
+              "dataTypes": [
+                {
+                  "dataTypeName": "肝功能检验结果",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "肝功能检查检验数据规则"
+                }
+              ]
+            }
+          ]
+        }  
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "其他",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "数据库标识",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "数据库标识数据",
+              "categoryDescription": "",
+              "dataTypes": [
+                {
+                  "dataTypeName": "ID",
+                  "attributeIdentifier": "数据库",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "数据库标识规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "数据库标识数据",
+              "categoryDescription": "",
+              "dataTypes": [
+                {
+                  "dataTypeName": "jxzh",
+                  "attributeIdentifier": "数据库",
+                  "dataLevel": 2,
+                  "dataImportance": "一般数据",
+                  "dataFeature": "数据库标识规则1"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    
+  ]
+}
+
+
+
+jzxh	name	age	gender	admission_date	discharge_date	discharge_department	diagnosis	address	chief_complaint	alt	ast	homocysteine	total_bilirubin	direct_bilirubin	indirect_bilirubin	albumin	globulin	total_protein	ast_alt_ratio	apolipoprotein_b	apolipoprotein_a	total_cholesterol	triglyceride	ggt	alkaline_phosphatase	creatine_kinase	alpha_hydroxybutyrate_dehydrogenase	lactate_dehydrogenase	ck_mb	creatinine	retinol_binding_protein	id	label
+
+
+(就诊时间|就诊完成时间|出院时间|住院时间|检测时间|admission_date|discharge_date)
+
+(科室名称|病区名称|科室|discharge_department)
+
+(谷丙转氨酶|谷草转氨酶|同型半胱氨酸|总胆红素|直接胆红素|间接胆红素|白蛋白|球蛋白|总蛋白|谷草\/谷丙转氨酶比值|载脂蛋白B|载脂蛋白A|总胆固醇|甘油三酯|谷氨酰转肽酶|碱性磷酸酶|磷酸肌酸激酶|α羟丁酸脱氢酶|乳酸脱氢酶|磷酸肌酸激酶同工酶|肌酐|视黄醇结合蛋白|alt|ast|homocysteine|total_bilirubin|direct_bilirubin|indirect_bilirubin|albumin|globulin|total_protein|ast_alt_ratio|apolipoprotein_b|apolipoprotein_a|total_cholesterol|triglyceride|ggt|alkaline_phosphatase|creatine_kinase|alpha_hydroxybutyrate_dehydrogenase|lactate_dehydrogenase|ck_mb|creatinine|retinol_binding_protein)

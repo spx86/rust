@@ -1,0 +1,230 @@
+{
+  "categoryModelName": "医保局医疗信息分级分类模板",
+  "creator": "spengxu",
+  "categories": [
+    {
+      "level": "1",
+      "categoryName": "个人信息",
+      "categoryDescription": "个人信息",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "个人数据",
+          "categoryDescription": "个人数据",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "个人基本资料",
+              "categoryDescription": "自然人基本情况信息",
+              "dateTypes": [
+                {
+                  "dataTypeName": "个人姓名",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "姓名规则"
+                },
+                {
+                  "dataTypeName": "生日",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "生日"
+                },
+                {
+                  "dataTypeName": "年龄",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "年龄规则"
+                },
+                {
+                  "dataTypeName": "性别",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "性别规则"
+                },
+                {
+                  "dataTypeName": "民族",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "民族"
+                },
+                {
+                  "dataTypeName": "国籍",
+                  "attributeIdentifier": "个人",
+                  "dataLevel": 3,
+                  "dataFeature": "国籍"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "医疗数据",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "医疗应用数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "医院应用基本数据",
+              "categoryDescription": "指在医疗服务过程中，医院内提供服务的基础数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "科室名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "名称规则"
+                },
+                {
+                  "dataTypeName": "病区名称",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "名称规则1"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "医疗服务基本数据",
+              "categoryDescription": "记录患者的就诊和检测过程的基本情况的数据",
+              "dateTypes": [
+                {
+                  "dataTypeName": "就诊时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则"
+                },
+                {
+                  "dataTypeName": "就诊完成时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则1"
+                },
+                {
+                  "dataTypeName": "出院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则2"
+                },
+                {
+                  "dataTypeName": "入院时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则3"
+                },
+                {
+                  "dataTypeName": "检测时间",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 2,
+                  "dataFeature": "医疗时间规则4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "level": "2",
+          "categoryName": "健康状况数据",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "检查检验数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "肝功能检验结果",
+                  "attributeIdentifier": "医疗",
+                  "dataLevel": 4,
+                  "dataFeature": "肝功能检查检验数据规则"
+                }
+              ]
+            }
+          ]
+        }  
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "其他",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "数据库标识",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "数据库标识数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "ID",
+                  "attributeIdentifier": "数据库",
+                  "dataLevel": 2,
+                  "dataFeature": "数据库标识规则"
+                }
+              ]
+            },
+            {
+              "level": "3",
+              "categoryName": "数据库标识数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "jxzh",
+                  "attributeIdentifier": "数据库",
+                  "dataLevel": 2,
+                  "dataFeature": "数据库标识规则"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "level": "1",
+      "categoryName": "其他",
+      "categoryDescription": "",
+      "subcategories": [
+        {
+          "level": "2",
+          "categoryName": "数据库标识",
+          "categoryDescription": "",
+          "subcategories": [
+            {
+              "level": "3",
+              "categoryName": "数据库标识数据",
+              "categoryDescription": "",
+              "dateTypes": [
+                {
+                  "dataTypeName": "jxzh",
+                  "attributeIdentifier": "数据库",
+                  "dataLevel": 2,
+                  "dataFeature": "数据库标识规则"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+    
+  ]
+}
+
+
+
+{"generalizationRules":".*([0-9]{1,3})岁.*=成年人; .*([0-9]{1,2})岁.*=青少年; .*([0-9]{1,3})岁.*=儿童; .*([0-9]{1,3})岁.*=老年人; .*([0-9]+)天([0-9]+)小时.*=年龄不足; .*([0-9]+)小时([0-9]+)分钟.*=年龄不足; .*([0-9]+)月([0-9]+)天.*=年轻; .*([0-9]{1,2})年([0-9]{1,2})月.*=青少年; .*([0-9]+)分钟.*=极小年龄; .*([0-9]+)小时.*=极小年龄; .*([0-9]+)月.*=未满年龄; .*([0-9]+)天.*=极小年龄"}
+
+{"dateFormatPattern" : "yyyy年MM月dd日"}
+
+
+{"generalizationRules":".*([0-9]{1,3})岁.*=成年人; .*([0-9]{1,2})岁.*=青少年; .*([0-9]{1,3})岁.*=儿童; .*([0-9]{1,3})岁.*=老年人; .*([0-9]+)天([0-9]+)小时.*=年龄不足; .*([0-9]+)小时([0-9]+)分钟.*=年龄不足; .*([0-9]+)月([0-9]+)天.*=年轻; .*([0-9]{1,2})年([0-9]{1,2})月.*=青少年; .*([0-9]+)分钟.*=极小年龄; .*([0-9]+)小时.*=极小年龄; .*([0-9]+)月.*=未满年龄; .*([0-9]+)天.*=极小年龄"}

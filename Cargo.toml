@@ -1,6 +1,6 @@
 [workspace]
-members = [
-    "httpie", "queryer", 
+members = [ "execlToJson",
+    "httpie", "myString", "queryer", 
     "thumbor_rs"
 ]
 
