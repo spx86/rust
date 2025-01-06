@@ -1,6 +1,6 @@
 [workspace]
 members = [ "execlToJson",
-    "httpie", "myString", "queryer", 
+    "httpie", "kv-server", "myString", "queryer", 
     "thumbor_rs"
 ]
 

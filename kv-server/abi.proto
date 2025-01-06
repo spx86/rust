@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+package abi;
+
+message = CommandRequest {
+    oneof request_data {
+        Hget hget = 1;
+        Hgetall hgetall = 2;
+        Hmget hmget = 3;
+        Hset hset = 4;
+        Hmset hmset = 5;
+        Hdel hdel = 6;
+        Hmdel hmdel = 7;
+        Hexist hexist = 8;
+        Hexists hexists = 9;
+    }
+}
+
+message CommandResponse {
+    // Status Code
+    uint32 status = 1;
+
+    //Error Message
+    string message = 2;
+
+    // if Success return value
+    repeated Value values = 3;
+
+    // if Success return kv pairs
+    repeated Kvpair pairs = 4;
+}
+
+message Hget {
+    string table = 1;
+    string key = 2;
+}
