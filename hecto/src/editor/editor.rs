@@ -1,45 +1,87 @@
-use crate::editor::terminal::{Position, Size, Terminal};
-use crossterm::event::{read, Event, Event::Key, KeyCode::Char, KeyEvent, KeyModifiers};
+use super::terminal::{Position, Size, Terminal};
+use super::view::View;
+use core::cmp::min;
+use crossterm::event::{read, Event, KeyCode, KeyEvent, KeyEventKind, KeyModifiers};
+use std::env;
 use std::io::Error;
+
+#[derive(Copy, Clone, Default)]
+struct Location {
+    x: usize,
+    y: usize,
+}
+
+#[derive(Default)]
 pub struct Editor {
     should_quit: bool,
+    location: Location,
+    view: View,
 }
 
 impl Editor {
-    pub fn default() -> Self {
-        Self { should_quit: false }
-    }
-
     pub fn run(&mut self) {
         Terminal::initialize().unwrap();
+        self.handle_args();
         let result = self.repl();
         Terminal::terminate().unwrap();
         result.unwrap();
     }
 
-    fn evaluate_event(&mut self, event: &Event) {
-        if let Key(KeyEvent {
-            code, modifiers, ..
-        }) = event
-        {
-            crossterm::style::Print("{code:?}\r");
-            match code {
-                Char('w') if *modifiers == KeyModifiers::CONTROL => self.should_quit = true,
+    #[allow(clippy::needless_pass_by_value)]
+    fn evaluate_event(&mut self, event: Event) -> Result<(), Error> {
+        match event {
+            Event::Key(KeyEvent {
+                code,
+                modifiers,
+                kind: KeyEventKind::Press,
+                ..
+            }) => match (code, modifiers) {
+                (KeyCode::Char('w'), KeyModifiers::CONTROL) => {
+                    self.should_quit = true;
+                }
+                (
+                    KeyCode::Up
+                    | KeyCode::Down
+                    | KeyCode::Left
+                    | KeyCode::Right
+                    | KeyCode::PageDown
+                    | KeyCode::PageUp
+                    | KeyCode::End
+                    | KeyCode::Home,
+                    _,
+                ) => {
+                    self.move_point(code)?;
+                }
                 _ => {}
+            },
+            Event::Resize(width_u16, height_u16) => {
+                #[allow(clippy::as_conversions)]
+                let height = height_u16 as usize;
+
+                #[allow(clippy::as_conversions)]
+                let width = width_u16 as usize;
+                self.view.resize(Size { width, height });
             }
+            _ => {}
         }
+        Ok(())
     }
 
-    fn refresh_screen(&self) -> Result<(), Error> {
-        Terminal::hide_cursor()?;
+    fn refresh_screen(&mut self) -> Result<(), Error> {
+        Terminal::hide_caret()?;
+
+        Terminal::move_caret_to(Position::default())?;
         if self.should_quit {
             Terminal::clear_screen()?;
             Terminal::print("Goodbye!\r\n")?;
         } else {
-            Self::draw_rows()?;
-            Terminal::move_cursor_to(Position { x: 0, y: 0 })?;
+            self.view.render()?;
+            Terminal::move_caret_to(Position {
+                col: self.location.x,
+                row: self.location.y,
+            })?;
         }
-        Terminal::show_cursor()?;
+        Terminal::show_caret()?;
         Terminal::execute()?;
         Ok(())
     }
@@ -51,20 +93,52 @@ impl Editor {
                 break;
             }
             let event = read()?;
-            self.evaluate_event(&event);
+            self.evaluate_event(event)?;
         }
         Ok(())
     }
 
-    fn draw_rows() -> Result<(), Error> {
-        let Size { height, .. } = Terminal::get_size()?;
-        for current_row in 0..height {
-            Terminal::cleat_line()?;
-            Terminal::print("~")?;
-            if current_row + 1 < height {
-                Terminal::print("\r\n")?;
+    fn move_point(&mut self, key_code: KeyCode) -> Result<(), Error> {
+        let Location { mut x, mut y } = self.location;
+
+        let Size { width, height } = Terminal::get_size()?;
+
+        match key_code {
+            KeyCode::Up => {
+                y = y.saturating_sub(1);
             }
+            KeyCode::Down => {
+                y = min(y.saturating_add(1), height.saturating_sub(1));
+            }
+            KeyCode::Left => {
+                x = x.saturating_sub(1);
+            }
+            KeyCode::Right => {
+                x = min(x.saturating_add(1), width.saturating_sub(1));
+            }
+            KeyCode::PageUp => {
+                y = y.saturating_sub(height);
+            }
+            KeyCode::PageDown => {
+                y = min(y.saturating_add(height), height.saturating_sub(1));
+            }
+            KeyCode::Home => {
+                x = 0;
+            }
+            KeyCode::End => {
+                x = width;
+            }
+            _ => {}
         }
+        self.location = Location { x, y };
         Ok(())
+    }
+
+    fn handle_args(&mut self) {
+        let args: Vec<String> = env::args().collect();
+
+        if let Some(file_name) = args.get(1) {
+            self.view.load(file_name);
+        }
     }
 }
