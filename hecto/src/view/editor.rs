@@ -56,25 +56,12 @@ impl Editor {
             _ => false,
         };
         if should_process {
-            match EditorCommand::try_from(event) {
-                Ok(command) => {
-                    if matches!(command, EditorCommand::Quit) {
-                        self.should_quit = true;
-                    } else {
-                        self.view.handle_command(command);
-                    }
+            if let Ok(command) = EditorCommand::try_from(event) {
+                if matches!(command, EditorCommand::Quit) {
+                    self.should_quit = true;
+                } else {
+                    self.view.handle_command(command);
                 }
-                Err(err) => {
-                    #[cfg(debug_assertions)]
-                    {
-                        panic!("Error processing event: {err}");
-                    }
-                }
-            }
-        } else {
-            #[cfg(debug_assertions)]
-            {
-                panic!("Received and discarded unsupported or non-press event.");
             }
         }
     }
@@ -83,7 +70,7 @@ impl Editor {
         let _ = Terminal::hide_caret();
         self.view.render();
 
-        let _ = Terminal::move_caret_to(self.view.get_position());
+        let _ = Terminal::move_caret_to(self.view.caret_position());
 
         let _ = Terminal::show_caret();
         let _ = Terminal::execute();

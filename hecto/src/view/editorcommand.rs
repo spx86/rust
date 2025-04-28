@@ -18,8 +18,13 @@ pub enum EditorCommand {
     Move(Direction),
     Quit,
     Resize(Size),
+    Insert(char),
+    Backspace,
+    Delete,
+    Enter,
 }
 
+#[allow(clippy::as_conversions)]
 impl TryFrom<Event> for EditorCommand {
     type Error = String;
 
@@ -29,6 +34,9 @@ impl TryFrom<Event> for EditorCommand {
                 code, modifiers, ..
             }) => match (code, modifiers) {
                 (KeyCode::Char('w'), KeyModifiers::CONTROL) => Ok(Self::Quit),
+                (KeyCode::Char(character), KeyModifiers::NONE | KeyModifiers::SHIFT) => {
+                    Ok(Self::Insert(character))
+                }
                 (KeyCode::PageUp, _) => Ok(Self::Move(Direction::PageUp)),
                 (KeyCode::PageDown, _) => Ok(Self::Move(Direction::PageDown)),
                 (KeyCode::Home, _) => Ok(Self::Move(Direction::Home)),
@@ -37,13 +45,15 @@ impl TryFrom<Event> for EditorCommand {
                 (KeyCode::Down, _) => Ok(Self::Move(Direction::Down)),
                 (KeyCode::Left, _) => Ok(Self::Move(Direction::Left)),
                 (KeyCode::Right, _) => Ok(Self::Move(Direction::Right)),
+                (KeyCode::Backspace, _) => Ok(Self::Backspace),
+                (KeyCode::Delete, _) => Ok(Self::Delete),
+                (KeyCode::Enter, _) => Ok(Self::Enter),
+                (KeyCode::Tab, _) => Ok(Self::Insert('\t')),
                 _ => Err(format!("Key Code not supported: {code:?}")),
             },
             Event::Resize(width_u16, height_u16) => {
-                #[allow(clippy::as_conversions)]
                 let height = height_u16 as usize;
 
-                #[allow(clippy::as_conversions)]
                 let width = width_u16 as usize;
                 Ok(Self::Resize(Size { width, height }))
             }

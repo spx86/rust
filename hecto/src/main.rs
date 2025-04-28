@@ -6,9 +6,8 @@
     clippy::as_conversions,
     clippy::integer_division
 )]
-
-use editor::editor::Editor;
-mod editor;
+mod view;
+use view::editor::Editor;
 
 fn main() {
     Editor::new().unwrap().run();
