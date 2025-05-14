@@ -1,8 +1,8 @@
 use crossterm::cursor::{Hide, MoveTo, Show};
-use crossterm::style::Print;
+use crossterm::style::{Attribute, Print};
 use crossterm::terminal::{
-    disable_raw_mode, enable_raw_mode, size, Clear, ClearType, EnterAlternateScreen,
-    LeaveAlternateScreen,
+    disable_raw_mode, enable_raw_mode, size, Clear, ClearType, DisableLineWrap, EnableLineWrap,
+    EnterAlternateScreen, LeaveAlternateScreen, SetTitle,
 };
 use crossterm::{queue, Command};
 use std::io::{stdout, Error, Write};
@@ -13,7 +13,7 @@ pub struct Size {
     pub height: usize,
 }
 
-#[derive(Copy, Clone, Default)]
+#[derive(Copy, Clone, Default, PartialEq, Eq)]
 pub struct Position {
     pub col: usize,
     pub row: usize,
@@ -33,6 +33,7 @@ pub struct Terminal {}
 impl Terminal {
     pub fn terminate() -> Result<(), Error> {
         Self::leave_alternate_screen()?;
+        Self::enable_line_wrap()?;
         Self::show_caret()?;
         Self::execute()?;
         disable_raw_mode()
@@ -41,6 +42,7 @@ impl Terminal {
     pub fn initialize() -> Result<(), Error> {
         enable_raw_mode()?;
         Self::enter_alternate_screen()?;
+        Self::disable_line_wrap()?;
         Self::clear_screen()?;
         Self::execute()
     }
@@ -103,5 +105,30 @@ impl Terminal {
 
     pub fn leave_alternate_screen() -> Result<(), Error> {
         Self::queue_command(LeaveAlternateScreen)
+    }
+
+    pub fn disable_line_wrap() -> Result<(), Error> {
+        Self::queue_command(DisableLineWrap)
+    }
+
+    pub fn enable_line_wrap() -> Result<(), Error> {
+        Self::queue_command(EnableLineWrap)
+    }
+
+    pub fn set_title(title: &str) -> Result<(), Error> {
+        Self::queue_command(SetTitle(title))
+    }
+
+    pub fn print_inverted_row(row: usize, line_text: &str) -> Result<(), Error> {
+        let width = Self::get_size()?.width;
+        Self::print_now(
+            row,
+            &format!(
+                "{}{:width$.width$}{}",
+                Attribute::Reverse,
+                line_text,
+                Attribute::Reset
+            ),
+        )
     }
 }
