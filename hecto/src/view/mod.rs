@@ -1,7 +1,7 @@
 pub mod buffer;
 pub mod document_status;
 pub mod editor;
-pub mod editorcommand;
+pub mod command;
 pub mod file_info;
 pub mod line;
 pub mod status_bar;

@@ -2,7 +2,7 @@
 members = [ "execlToJson", "hecto",
     "httpie", "myString", "queryer", 
     "thumbor_rs"
-]
+, "web3test"]
 
 
 resolver = "2"

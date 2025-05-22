@@ -1,0 +1,11 @@
+/home/spengxu/rust/target/debug/deps/libconvert_case-b24319640d0ce625.rmeta: /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/lib.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/boundary.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/case.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/converter.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/pattern.rs
+
+/home/spengxu/rust/target/debug/deps/libconvert_case-b24319640d0ce625.rlib: /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/lib.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/boundary.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/case.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/converter.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/pattern.rs
+
+/home/spengxu/rust/target/debug/deps/convert_case-b24319640d0ce625.d: /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/lib.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/boundary.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/case.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/converter.rs /home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/pattern.rs
+
+/home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/lib.rs:
+/home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/boundary.rs:
+/home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/case.rs:
+/home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/converter.rs:
+/home/spengxu/.cargo/registry/src/index.crates.io-6f17d22bba15001f/convert_case-0.7.1/src/pattern.rs:
