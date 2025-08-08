@@ -3,10 +3,7 @@ use std::{
     time::{Duration, Instant},
 };
 
-use super::{
-    terminal::{Size, Terminal},
-    uicomponent::UIComponent,
-};
+use super::{size::Size, terminal::Terminal, uicomponent::UIComponent};
 const DEFAULT_DURATION: Duration = Duration::new(5, 0);
 
 struct Message {

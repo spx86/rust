@@ -1,7 +1,5 @@
 use super::{
-    document_status::DocumentStatus,
-    terminal::{Size, Terminal},
-    uicomponent::UIComponent,
+    document_status::DocumentStatus, size::Size, terminal::Terminal, uicomponent::UIComponent,
 };
 use std::io::Error;
 

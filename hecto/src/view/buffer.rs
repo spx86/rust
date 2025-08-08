@@ -1,6 +1,5 @@
-use super::file_info::FileInfo;
-use super::line::Line;
-use super::view::Location;
+use super::file_info;
+use super::{file_info::FileInfo, line::Line, view::Location};
 use std::fs::{read_to_string, File};
 use std::io::{Error, Write};
 
@@ -78,14 +77,31 @@ impl Buffer {
         }
     }
 
-    pub fn save(&mut self) -> Result<(), Error> {
-        if let Some(path) = &self.file_info.path {
+    fn save_to_file(&self, file_info: &FileInfo) -> Result<(), Error> {
+        if let Some(path) = &file_info.get_path() {
             let mut file = File::create(path)?;
             for line in &self.lines {
                 writeln!(file, "{}", line.to_string())?;
             }
-            self.dirty = false;
         }
         Ok(())
+    }
+
+    pub fn save_as(&mut self, file_name: &str) -> Result<(), Error> {
+        let file_info = FileInfo::from(file_name);
+        self.save_to_file(&file_info)?;
+        self.file_info = file_info;
+        self.dirty = false;
+        Ok(())
+    }
+
+    pub fn save(&mut self) -> Result<(), Error> {
+        self.save_to_file(&self.file_info)?;
+        self.dirty = false;
+        Ok(())
+    }
+
+    pub const fn is_file_loaded(&self) -> bool {
+        self.file_info.has_path()
     }
 }

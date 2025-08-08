@@ -3,8 +3,11 @@ use super::{
     command::{Edit, Move},
     document_status::DocumentStatus,
     editor::{NAME, VERSION},
+    file_info::FileInfo,
     line::Line,
-    terminal::{Position, Size, Terminal},
+    position::Position,
+    size::Size,
+    terminal::Terminal,
     uicomponent::UIComponent,
 };
 use std::{cmp::min, io::Error};
@@ -62,6 +65,10 @@ impl View {
     //     }
     //     self.needs_redraw = false;
     // }
+
+    pub const fn is_file_loaded(&self) -> bool {
+        self.buffer.is_file_loaded()
+    }
 
     pub fn handle_edit_command(&mut self, command: Edit) {
         match command {
@@ -278,6 +285,10 @@ impl View {
     pub fn save(&mut self) -> Result<(), Error> {
         self.buffer.save()
     }
+
+    pub fn save_as(&mut self, file_name: &str) -> Result<(), Error> {
+        self.buffer.save_as(file_name)
+    }
 }
 
 impl UIComponent for View {
@@ -294,16 +305,16 @@ impl UIComponent for View {
         self.scroll_location_into_view();
     }
 
-    fn draw(&mut self, origin_y: usize) -> Result<(), Error> {
+    fn draw(&mut self, origin_row: usize) -> Result<(), Error> {
         let Size { height, width } = self.size;
-        let end_y = origin_y.saturating_add(height);
+        let end_y = origin_row.saturating_add(height);
         #[allow(clippy::integer_division)]
         let top_third = height / 3;
         let scroll_top = self.scroll_offset.row;
 
-        for current_row in origin_y..end_y {
+        for current_row in origin_row..end_y {
             let line_idx = current_row
-                .saturating_sub(origin_y)
+                .saturating_sub(origin_row)
                 .saturating_add(scroll_top);
 
             if let Some(line) = self.buffer.lines.get(line_idx) {

@@ -1,10 +1,13 @@
 [workspace]
-members = [ "execlToJson", "hecto",
-    "httpie", "myString", "queryer", 
-    "thumbor_rs"
-, "web3test"]
+members = [ "blog_os", "burn_example", "deepLearning",
+    "execlToJson",
+    "hecto",
+    "httpie", "leetcode",
+    "myString",
+    "queryer",
+    "thumbor_rs",
+    "web3test",
+]
 
 
 resolver = "2"
-
-

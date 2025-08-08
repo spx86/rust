@@ -2,19 +2,10 @@ use super::{Engine, SpecTransform};
 use crate::pb::*;
 use anyhow::{Ok, Result};
 use bytes::Bytes;
-use image::{
-    DynamicImage,
-    ImageBuffer,
-    ImageFormat,
-};
+use image::{DynamicImage, ImageBuffer, ImageFormat};
 use lazy_static::lazy_static;
 use photon_rs::{
-    effects,
-    filters,
-    multiple,
-    native::open_image_from_bytes,
-    transform,
-    PhotonImage,
+    effects, filters, multiple, native::open_image_from_bytes, transform, PhotonImage,
 };
 use std::{convert::TryFrom, io::Cursor};
 
@@ -49,7 +40,6 @@ impl Engine for Photon {
                 Some(spec::Data::Watermark(ref v)) => self.transform(v),
                 // 对于目前不认识的 spec，不做任何处理
                 _ => {}
-
             }
         }
     }
@@ -87,7 +77,7 @@ impl SpecTransform<&Fliph> for Photon {
 impl SpecTransform<&Filter> for Photon {
     fn transform(&mut self, op: &Filter) {
         match filter::Filter::try_from(op.filter).unwrap() {
-            filter::Filter::Unspecified => {},
+            filter::Filter::Unspecified => {}
             f => filters::filter(&mut self.0, f.to_str().unwrap()),
         }
     }
@@ -95,12 +85,12 @@ impl SpecTransform<&Filter> for Photon {
 
 impl SpecTransform<&Resize> for Photon {
     fn transform(&mut self, op: &Resize) {
-        let img = match resize::ResizeType::try_from(op.rtype).unwrap(){
+        let img = match resize::ResizeType::try_from(op.rtype).unwrap() {
             resize::ResizeType::Normal => transform::resize(
                 &mut self.0,
-                    op.width, 
-                    op.height, 
-                    resize::SampleFilter::try_from(op.filter).unwrap().into()
+                op.width,
+                op.height,
+                resize::SampleFilter::try_from(op.filter).unwrap().into(),
             ),
             resize::ResizeType::SeamCarve => {
                 transform::seam_carve(&mut self.0, op.width, op.height)
@@ -110,9 +100,9 @@ impl SpecTransform<&Resize> for Photon {
     }
 }
 
-impl SpecTransform<&Watermark> for Photon{
+impl SpecTransform<&Watermark> for Photon {
     fn transform(&mut self, op: &Watermark) {
-        multiple::watermark(&mut self.0, &WATERMARK, op.x, op.y);
+        multiple::watermark(&mut self.0, &WATERMARK, op.x.try_into().unwrap(), op.y.try_into().unwrap());
     }
 }
 
@@ -133,4 +123,4 @@ fn image_to_buf(img: PhotonImage, format: ImageFormat) -> Vec<u8> {
     let mut cursor = Cursor::new(&mut buffer);
     dynimage.write_to(&mut cursor, format).unwrap();
     buffer
-}   
+}

@@ -1,0 +1,14 @@
+[package]
+name = "burn_example"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+burn = { version = "~0.18", features = [
+    "std",
+    "tui",
+    "train",
+    "vision",
+    "fusion",
+    "ndarray"
+], default-features = false }

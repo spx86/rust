@@ -1,11 +1,14 @@
 pub mod buffer;
+pub mod command;
+pub mod commandbar;
 pub mod document_status;
 pub mod editor;
-pub mod command;
 pub mod file_info;
 pub mod line;
+pub mod messagebar;
+pub mod position;
+pub mod size;
 pub mod status_bar;
 pub mod terminal;
 pub mod uicomponent;
 pub mod view;
-pub mod messagebar;

@@ -1,0 +1,12 @@
+[package]
+name = "deepLearning"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+burn = { version = "0.17", default-features = false, features = ["ndarray", "wgpu"] }
+burn-autodiff = "0.17.1"
+ndarray = "0.16.1"
+plotters = "0.3.7"
+rand = {version = "0.9", default-features = false }
+rand_distr = "0.5"
